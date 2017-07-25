@@ -6,9 +6,8 @@ composer show illuminate/database
 
 composer require illuminate/database    4.2.*
 
-
-
-
-
-
+-------
 composer dump-autoload
+
+-------
+http://localhost/mvcliao/public/home/create/hello/good@foo.com
