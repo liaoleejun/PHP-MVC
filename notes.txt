@@ -9,8 +9,7 @@ public/ 和 app/ 保持独立，当app/修改了，public/不用变，照样找�
 mymvc/
 ├── app/
 │   ├── core/
-│   │	├── App.php
-│	│	└── Controller.php
+│   │	└── App.php
 │   ├── controllers/
 │   ├── models/
 │   ├── view/
@@ -27,4 +26,4 @@ App.php
 Controller.php
 	(为了不用在 public/ 目录下建诸如 contact.php, forum.php 等等，our controller core and this is going to allow us to access methods like view and model to loading models and render views)
 
-访问: http://localhost/mymvc/public -> 查看 App.php 里面的 echo 语句
+访问: http://localhost/mvcliao/public -> 查看 App.php 里面的 echo 语句
