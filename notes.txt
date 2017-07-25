@@ -1,0 +1,30 @@
+Lecture 3:
+1. 访问的是index.php --> index.php；
+   访问的不是index.php，且访问的目录、文件不存在 --> .htaccess --> 重写到index.php，并且把路径当字符串传入到index.php（然后，传入到App.php）。
+2. public/index.php --> app/init.php --> App.php
+public/ 和 app/ 保持独立，当app/修改了，public/不用变，照样找接口人 init.php，由接口人init.php 去适配app/的一切变化。总之，好处是很大的。
+
+在 public/ 下不建立 about.php, contact.php, forum.php，而是在 controllers/ 下面建立 这些controller，简单来说，统一一个入口：index.php
+
+mymvc/
+├── app/
+│   ├── core/
+│   │	├── App.php
+│	│	└── Controller.php
+│   ├── controllers/
+│   ├── models/
+│   ├── view/
+│   └── init.php
+└── public/
+    └── index.php
+
+index.php
+	for bootstraping i.e. land on
+init.php
+	for initialization (the initialization file will requiring all the core components that you need)
+App.php
+	for instantiation and routing
+Controller.php
+	(为了不用在 public/ 目录下建诸如 contact.php, forum.php 等等，our controller core and this is going to allow us to access methods like view and model to loading models and render views)
+
+访问: http://localhost/mymvc/public -> 查看 App.php 里面的 echo 语句
