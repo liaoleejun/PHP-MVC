@@ -1,0 +1,14 @@
+安装 composer
+
+cd 到项目根目录
+
+composer show illuminate/database
+
+composer require illuminate/database    4.2.*
+
+
+
+
+
+
+composer dump-autoload
